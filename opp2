@@ -1,0 +1,23 @@
+class hero :
+
+  def __init__(self, inputname, inputhealth, inputpower, inputarmor):
+    self.name = inputname
+    self.health = inputhealth
+    self.power = inputpower
+    self.armor = inputarmor
+
+  # Destruktor
+  def __del__(self):
+    class_name = self.__class__.__name__
+    print("sebuah objek", class_name,",yaitu", self.name," dihapus")
+
+hero1 = hero ("sniper",100, 10, 4)
+hero2 = hero ("marina",100, 15, 1)
+hero3 = hero ("ucup",1000, 10, 0)
+
+print(hero1.__dict__)
+print(hero2.__dict__)
+print(hero3.__dict__)
+
+#delet haro
+del hero1

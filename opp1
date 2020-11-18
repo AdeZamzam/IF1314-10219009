@@ -1,0 +1,20 @@
+class hero: #tamplate
+  pass
+
+
+hero1 = hero () #object
+hero2 = hero()
+hero3 = hero()
+
+hero1.name = "sniper"
+hero.health = 100
+
+hero1.name = "sven"
+hero.health = 200
+
+hero1.name = "ucupp"
+hero.health = 1000
+
+print(hero1)
+print(hero1.__dict__)
+print(hero1.name)

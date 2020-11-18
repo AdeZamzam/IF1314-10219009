@@ -1,0 +1,33 @@
+class hero :
+  #kelas variable
+  jumlah = 0
+
+#konstruktor
+  def __init__(self, inputname, inputhealth, inputpower, inputarmor):
+    self.name = inputname
+    self.health = inputhealth
+    self.power = inputpower
+    self.armor = inputarmor
+    hero.jumlah += 1
+    print(" Membuat hero dengan nama" + inputname)
+
+  # Destruktor
+  def __del__(self):
+    class_name = self.__class__.__name__
+    hero.jumlah -=1
+    print("sebuah objek", class_name,",yaitu", self.name," dihapus")
+
+hero1 = hero ("sniper",100, 10, 4)
+print("Jumlah hero", hero.jumlah)
+hero2 = hero ("marina",100, 15, 1)
+print("Jumlah hero", hero.jumlah)
+hero3 = hero ("ucup",1000, 10, 0)
+print("Jumlah hero", hero.jumlah)
+
+print(hero1.__dict__)
+print(hero2.__dict__)
+print(hero3.__dict__)
+
+#delet hero
+del hero1
+print("jumlah hero :", hero.jumlah)
